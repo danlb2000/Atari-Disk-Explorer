@@ -1,0 +1,247 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9CBED38E-ED33-47DD-9B41-F516787DF719}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AtariDiskExplorer</RootNamespace>
+    <AssemblyName>AtariDiskExplorer</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>floppy.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutBox.Designer.cs">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SynAssemblerLister.cs" />
+    <Compile Include="BootRecordForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BootRecordForm.Designer.cs">
+      <DependentUpon>BootRecordForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Disassembler.cs" />
+    <Compile Include="DiskExplorer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DiskImageProperies.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DiskImageProperies.Designer.cs">
+      <DependentUpon>DiskImageProperies.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InputBox.cs" />
+    <Compile Include="ListViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListViewer.Designer.cs">
+      <DependentUpon>ListViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="m6502Disasm.cs" />
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewDiskImageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewDiskImageForm.Designer.cs">
+      <DependentUpon>NewDiskImageForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="NewDiskImageForm.resx">
+      <DependentUpon>NewDiskImageForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="Properties\DataSources\AtariDisk.FileSystems.FileSector.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="RecentFilesHandler.cs" />
+    <Compile Include="SectorRangePicker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SectorRangePicker.Designer.cs">
+      <DependentUpon>SectorRangePicker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StatusForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StatusForm.Designer.cs">
+      <DependentUpon>StatusForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewers\AtasciiFileSaveForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewers\AtasciiFileSaveForm.Designer.cs">
+      <DependentUpon>AtasciiFileSaveForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewers\AtasciiFileViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewers\AtasciiView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Viewers\DisAsmView.cs" />
+    <Compile Include="Viewers\FileDisasmViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewers\FileView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Viewers\HexFileViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewers\HexView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Viewers\SectorViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewFileInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewFileInfo.Designer.cs">
+      <DependentUpon>ViewFileInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewSectorMap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewSectorMap.Designer.cs">
+      <DependentUpon>ViewSectorMap.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AboutBox.resx">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BootRecordForm.resx">
+      <DependentUpon>BootRecordForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cset.bmp" />
+    <EmbeddedResource Include="DiskExplorer.resx">
+      <DependentUpon>DiskExplorer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DiskImageProperies.resx">
+      <DependentUpon>DiskImageProperies.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListViewer.resx">
+      <DependentUpon>ListViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SectorRangePicker.resx">
+      <DependentUpon>SectorRangePicker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StatusForm.resx">
+      <DependentUpon>StatusForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewers\AtasciiFileSaveForm.resx">
+      <DependentUpon>AtasciiFileSaveForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewers\AtasciiFileViewer.resx">
+      <DependentUpon>AtasciiFileViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewers\FileView.resx">
+      <DependentUpon>FileView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewers\SectorViewer.resx">
+      <DependentUpon>SectorViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewFileInfo.resx">
+      <DependentUpon>ViewFileInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewSectorMap.resx">
+      <DependentUpon>ViewSectorMap.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AtariBasic\AtariBasic.csproj">
+      <Project>{C5C42117-5FB0-40A0-9566-8AAB1E784DCD}</Project>
+      <Name>AtariBasic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AtariDisk\AtariDisk.csproj">
+      <Project>{16C3AD23-28EC-47DA-95C9-3B8A0158646E}</Project>
+      <Name>AtariDisk_c</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="floppy.ico" />
+    <Content Include="ReadMe.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
